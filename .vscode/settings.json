@@ -1,3 +1,4 @@
 {
-    "cSpell.words": ["endr", "fasterxml", "springframework"]
+    "cSpell.words": ["endr", "fasterxml", "springframework"],
+    "java.configuration.updateBuildConfiguration": "interactive"
 }

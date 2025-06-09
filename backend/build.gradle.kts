@@ -5,6 +5,7 @@ plugins {
     kotlin("plugin.jpa") version kotlinVersion
     id("org.springframework.boot") version "3.5.0"
     id("io.spring.dependency-management") version "1.1.7"
+    id("org.openapi.generator") version "7.13.0"
 }
 
 group = "com.endr0id"
@@ -46,6 +47,25 @@ dependencies {
     }
 }
 
+// OpenAPI Generator Task
+openApiGenerate {
+    generatorName.set("kotlin-spring")
+    inputSpec.set("$rootDir/src/main/resources/openapi.yaml")
+    outputDir.set(layout.buildDirectory.dir("generated").get().asFile.absolutePath)
+    apiPackage.set("org.openapi.generated.api")
+    modelPackage.set("org.openapi.generated.model")
+    invokerPackage.set("org.openapi.generated.invoker")
+    configOptions.set(
+        mapOf(
+            "interfaceOnly" to "true",
+            "useSpringBoot3" to "true",
+            "dateLibrary" to "java8",
+            "serializationLibrary" to "jackson"
+        )
+    )
+}
+sourceSets["main"].java.srcDir(layout.buildDirectory.dir("/generated/src/main/kotlin"))
+
 kotlin {
     compilerOptions {
         freeCompilerArgs.addAll("-Xjsr305=strict")
@@ -65,5 +85,15 @@ tasks.withType<Test> {
 tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
     kotlinOptions {
         jvmTarget = "21"
+    }
+}
+
+tasks.named("compileKotlin") {
+    dependsOn("openApiGenerate")
+}
+
+tasks.named("clean") {
+    doFirst {
+        delete(layout.buildDirectory.dir("generated"))
     }
 }

@@ -5,9 +5,9 @@ info:
 
 paths:
     /users/{id}:
-        $ref: "./paths/users.yml#/getUserById"
+        $ref: "./paths/user/index.yml"
 
 components:
     schemas:
         User:
-            $ref: "./schemas/user.yml#/User"
+            $ref: "./schemas/user/index.yml"

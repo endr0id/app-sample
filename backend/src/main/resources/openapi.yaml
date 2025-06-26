@@ -5,40 +5,10 @@ info:
 servers:
 - url: /
 paths:
-  /users/{id}:
-    get:
-      parameters:
-      - in: path
-        name: id
-        required: true
-        schema:
-          type: integer
-      responses:
-        "200":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/User'
-          description: User found
-        "404":
-          description: User not found
-      summary: Get User by ID
+  /users/{id}: {}
 components:
   schemas:
     User:
-      example:
-        name: name
-        id: 0
-        email: email
-      properties:
-        id:
-          type: integer
-        name:
-          type: string
-        email:
-          type: string
-      required:
-      - email
-      - id
-      - name
+      type: object
+    index:
       type: object

@@ -1,0 +1,17 @@
+# Gradle
+.gradle/
+build/
+!gradle-wrapper.jar
+
+# IntelliJ
+.idea/
+*.iml
+
+# OpenAPI Generator
+.openapi-generator/
+
+# Logs
+*.log
+
+# Maven (使っていなければ)
+pom.xml

@@ -1,0 +1,14 @@
+openapi: 3.0.0
+info:
+  title: app-sample
+  version: 1.0.0
+servers:
+- url: /
+paths:
+  /users/{id}: {}
+components:
+  schemas:
+    User:
+      type: object
+    index:
+      type: object

@@ -1,0 +1,24 @@
+spring:
+    application:
+        name: appSample
+
+    datasource:
+        url: jdbc:postgresql://localhost:5432/app_db
+        username: local_user
+        password: password
+        driver-class-name: org.postgresql.Driver
+
+    jpa:
+        hibernate:
+            ddl-auto: update # 開発時は update、本番は validate か none 推奨
+        show-sql: true
+        properties:
+            hibernate:
+                format_sql: true
+
+    jackson:
+        serialization:
+            WRITE_DATES_AS_TIMESTAMPS: false
+
+server:
+    port: 8080

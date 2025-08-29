@@ -4,18 +4,56 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4e87556f-69d6-4e10-bd68-19c274462531" name="変更" comment="" />
+    <list default="true" id="4e87556f-69d6-4e10-bd68-19c274462531" name="変更" comment="feat: githubのISSUE template変更">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/sample-api/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/sample-api/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/sample-api/build.gradle.kts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/sample-api/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/sample-api/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/sample-api/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/sample-api/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/sample-api/settings.gradle.kts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/sample-api/src/main/kotlin/com/example/sample_api/SampleApiApplication.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/sample-api/src/main/kotlin/com/example/sample_api/application/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/sample-api/src/main/kotlin/com/example/sample_api/domain/model/.gitkeep" beforeDir="false" afterPath="$PROJECT_DIR$/backend/demo/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/sample-api/src/main/kotlin/com/example/sample_api/domain/repository/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/sample-api/src/main/kotlin/com/example/sample_api/infrastructure/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/sample-api/src/main/kotlin/com/example/sample_api/presentation/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/sample-api/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/sample-api/src/test/kotlin/com/example/sample_api/SampleApiApplicationTests.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/db/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker/db/docker-compose.yml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$/backend/sample-api">
+      <ProjectState />
+    </projectState>
+  </component>
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
+        <task path="$PROJECT_DIR$/backend/sample-api">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$/backend/sample-api/backend/sample-api">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$/backend/sample-api/backend">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
-            <expand />
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="demo" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
             <select />
           </tree_state>
         </projects_view>
@@ -35,18 +73,87 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Docker.docker-compose.yml.db: Compose デプロイ.executor": "Run",
+    "Docker.docker-compose.yml: Compose デプロイ.executor": "Run",
+    "Gradle.demo のビルド.executor": "Run",
+    "Kotlin.DemoApplicationKt.executor": "Run",
+    "Kotlin.SampleApiApplicationKt.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
     "RunOnceActivity.git.unshallow": "true",
     "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "develop",
+    "git-widget-placeholder": "feature/#7",
+    "last_opened_file_path": "/Users/w4.3nd0/Documents/app/app-sample",
     "project.structure.last.edited": "モジュール",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.0",
     "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle",
     "settings.editor.splitter.proportion": "0.35132384"
+  },
+  "keyToStringList": {
+    "com.intellij.ide.scratch.ScratchImplUtil$2/新規スクラッチファイル": [
+      "Markdown"
+    ]
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/docker/db" />
+      <recent name="$PROJECT_DIR$/docker" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Kotlin.DemoApplicationKt">
+    <configuration name="DemoApplicationKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.demo.DemoApplicationKt" />
+      <module name="demo.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SampleApiApplicationKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.sampleapi.SampleApiApplicationKt" />
+      <module name="sample-api_main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="db: Compose デプロイ" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="docker/db/docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="db.db: Compose デプロイ" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="db" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker/db/docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Kotlin.DemoApplicationKt" />
+        <item itemvalue="Kotlin.SampleApiApplicationKt" />
+        <item itemvalue="Docker.db: Compose デプロイ" />
+        <item itemvalue="Docker.db.db: Compose デプロイ" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="デフォルトタスク">
       <changelist id="4e87556f-69d6-4e10-bd68-19c274462531" name="変更" comment="" />
@@ -55,6 +162,72 @@
       <option name="presentableId" value="Default" />
       <updated>1749358946958</updated>
     </task>
+    <task id="LOCAL-00001" summary="feat: DB設定追加">
+      <option name="closed" value="true" />
+      <created>1755790150989</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1755790150989</updated>
+    </task>
+    <task id="LOCAL-00002" summary="feat: Spring framework設定追加&#10;&#10;対応内容:&#10;- Postgresql疎通確認">
+      <option name="closed" value="true" />
+      <created>1756217482710</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1756217482710</updated>
+    </task>
+    <task id="LOCAL-00003" summary="feat: githubのissue template追加">
+      <option name="closed" value="true" />
+      <created>1756303616080</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1756303616080</updated>
+    </task>
+    <task id="LOCAL-00004" summary="feat: githubのissue template変更">
+      <option name="closed" value="true" />
+      <created>1756303782713</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1756303782713</updated>
+    </task>
+    <task id="LOCAL-00005" summary="feat: githubのPR template追加">
+      <option name="closed" value="true" />
+      <created>1756304257324</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1756304257324</updated>
+    </task>
+    <task id="LOCAL-00006" summary="feat: githubのISSUE template変更">
+      <option name="closed" value="true" />
+      <created>1756304765282</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1756304765282</updated>
+    </task>
+    <task id="LOCAL-00007" summary="feat: githubのISSUE template変更">
+      <option name="closed" value="true" />
+      <created>1756305245980</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1756305245980</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feat: DB設定追加" />
+    <MESSAGE value="feat: Spring framework設定追加&#10;&#10;対応内容:&#10;- Postgresql疎通確認" />
+    <MESSAGE value="feat: githubのissue template追加" />
+    <MESSAGE value="feat: githubのissue template変更" />
+    <MESSAGE value="feat: githubのPR template追加" />
+    <MESSAGE value="feat: githubのISSUE template変更" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: githubのISSUE template変更" />
   </component>
 </project>

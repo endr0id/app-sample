@@ -11,4 +11,8 @@ class UserService(
     fun getAllUsers(): List<User> {
         return userRepository.findAll()
     }
+
+    fun getUser(id: Long): User? {
+        return userRepository.findById(id).orElse(null)
+    }
 }

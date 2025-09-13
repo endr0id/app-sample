@@ -2,6 +2,8 @@ package com.example.demo.controller
 
 import com.example.demo.application.services.UserService
 import com.example.demo.application.dto.response.user.UserResponseDTO
+import com.example.demo.application.mapper.toResponseDTO
+import com.example.demo.application.mapper.toResponseDTOList
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestMapping
@@ -15,15 +17,13 @@ class UserController(
 ) {
     @GetMapping
     fun getAllUsers(): ResponseEntity<List<UserResponseDTO>> {
-        val users = userService.getAllUsers().map { user ->
-            UserResponseDTO(user.id, user.name, user.email)
-        }
+        val users = userService.getAllUsers().toResponseDTOList()
         return ResponseEntity.ok(users)
     }
 
     @GetMapping("/{id}")
     fun getUser(@PathVariable id: Long): ResponseEntity<UserResponseDTO> {
-        val user = userService.getUser(id)?.let { UserResponseDTO(it.id, it.name, it.email) }
+        val user = userService.getUser(id)?.toResponseDTO()
         return user?.let { ResponseEntity.ok(user) } ?: ResponseEntity.notFound().build()
     }
 }

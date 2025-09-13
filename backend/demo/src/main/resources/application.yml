@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: demo
+  datasource:
+    url: jdbc:postgresql://localhost:5432/app_db
+    username: local_user
+    password: password
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true # SQLログを出力
+    properties:
+      hibernate:
+        format_sql: true

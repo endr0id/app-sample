@@ -1,4 +1,4 @@
-package com.example.demo.mapper
+package com.example.demo.controller
 
 import com.example.demo.application.dto.ApiResponse
 import com.example.demo.application.services.UserService

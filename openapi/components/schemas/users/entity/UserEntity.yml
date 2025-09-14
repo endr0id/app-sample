@@ -1,0 +1,13 @@
+UserEntity:
+  type: object
+  properties:
+    id:
+      type: integer
+      example: "1"
+    name:
+      type: string
+      example: "John Doe"
+    email:
+      type: string
+      format: email
+      example: "example@example.com"

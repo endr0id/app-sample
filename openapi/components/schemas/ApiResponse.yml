@@ -1,0 +1,5 @@
+ApiResponse:
+  type: object
+  properties:
+    data:
+      description: "Contains the retrieved resource information"

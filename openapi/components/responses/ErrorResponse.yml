@@ -1,0 +1,18 @@
+ErrorResponse:
+  type: object
+  properties:
+    code:
+      type: integer
+      description: "HTTP response status codes"
+    message:
+      type: string
+      description: "Error description"
+    errors:
+      type: array
+      items:
+        type: string
+      description: "Detailed error information (validation, etc.)"
+      example: [ "email must be valid", "name is required" ]
+  required:
+    - code
+    - message

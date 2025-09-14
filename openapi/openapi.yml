@@ -1,0 +1,18 @@
+openapi: 3.1.0
+info:
+  title: "Demo API"
+  version: "1.0.0"
+
+servers:
+  - url: "http://localhots:8080"
+
+paths:
+  /users:
+    $ref: "./paths/users/getUsers.yml"
+
+components:
+  schemas:
+    ApiResponse:
+      $ref: "./components/schemas/ApiResponse.yml#/ApiResponse"
+    UserListResponse:
+      $ref: "./components/schemas/users/UserListResponse.yml#/UserListResponse"

@@ -1,13 +1,18 @@
 UserEntity:
   type: object
+  description: "ユーザーに関する情報"
   properties:
     id:
       type: integer
+      description: "UIDであり1以上の整数で負数や0は無効"
+      minimum: "1"
       example: "1"
     name:
       type: string
+      description: "ユーザー名。形式制限はなし"
       example: "John Doe"
     email:
       type: string
+      description: "メールアドレス。RFC 5322 に準拠した形式"
       format: email
       example: "example@example.com"

@@ -1,0 +1,24 @@
+get:
+  summary: "ユーザー取得(単体)"
+  operationId: "getUserById"
+  parameters:
+    - in: path
+      name: id
+      required: true
+      description: "取得対象のユーザーID"
+      schema:
+        type: integer
+        minimum: 1
+  responses:
+    "200":
+      description: "OK"
+      content:
+        application/json:
+          schema:
+            $ref: "../../components/schemas/users/UserResponse.yml#/UserResponse"
+    "404":
+      description: "Not Found"
+      content:
+        application/json:
+          schema:
+            $ref: "../../components/responses/ErrorResponse.yml#/ErrorResponse"

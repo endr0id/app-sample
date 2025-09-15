@@ -9,6 +9,8 @@ servers:
 paths:
   /users:
     $ref: "./paths/users/getUsers.yml"
+  /users/{id}:
+    $ref: "./paths/users/getUserById.yml"
 
 components:
   schemas:
@@ -16,3 +18,5 @@ components:
       $ref: "./components/schemas/ApiResponse.yml#/ApiResponse"
     UserListResponse:
       $ref: "./components/schemas/users/UserListResponse.yml#/UserListResponse"
+    UserResponse:
+      $ref: "./components/schemas/users/UserResponse.yml"

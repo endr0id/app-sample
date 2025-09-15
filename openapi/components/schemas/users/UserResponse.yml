@@ -1,0 +1,7 @@
+UserResponse:
+  allOf:
+    - $ref: "../ApiResponse.yml#/ApiResponse"
+    - type: object
+      properties:
+        data:
+          $ref: "./entity/UserEntity.yml#/UserEntity"

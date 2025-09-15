@@ -3,13 +3,13 @@ get:
   operationId: "getAllUsers"
   responses:
     "200":
-      description: "OK"
+      description: "OK - (0件の場合は空配列を返す)"
       content:
         application/json:
           schema:
             $ref: "../../components/schemas/users/UserListResponse.yml#/UserListResponse"
-    "404":
-      description: "Not Found"
+    "500":
+      description: "Internal Server Error"
       content:
         application/json:
           schema:

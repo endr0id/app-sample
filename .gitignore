@@ -1,2 +1,6 @@
+# intelliJ settings
+.idea/
+backend/.idea/
+
 # vscode settings
 .vscode/

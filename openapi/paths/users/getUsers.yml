@@ -1,0 +1,16 @@
+get:
+  summary: "ユーザー一覧取得"
+  operationId: "getAllUsers"
+  responses:
+    "200":
+      description: "OK - (0件の場合は空配列を返す)"
+      content:
+        application/json:
+          schema:
+            $ref: "../../components/schemas/users/UserListResponse.yml#/UserListResponse"
+    "500":
+      description: "Internal Server Error"
+      content:
+        application/json:
+          schema:
+            $ref: "../../components/responses/ErrorResponse.yml#/ErrorResponse"

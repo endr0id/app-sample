@@ -1,0 +1,36 @@
+get:
+  summary: "ユーザー取得(単体)"
+  operationId: "getUserById"
+  parameters:
+    - in: path
+      name: id
+      description: "取得対象のユーザーID。1以上の整数で負数や文字列は不正とみなす"
+      required: true
+      schema:
+        type: integer
+        minimum: 1
+  responses:
+    "200":
+      description: "OK"
+      content:
+        application/json:
+          schema:
+            $ref: "../../components/schemas/users/UserResponse.yml#/UserResponse"
+    "400":
+      description: "Bad Request - IDが不正"
+      content:
+        application/json:
+          schema:
+            $ref: "../../components/responses/ErrorResponse.yml#/ErrorResponse"
+    "404":
+      description: "Not Found"
+      content:
+        application/json:
+          schema:
+            $ref: "../../components/responses/ErrorResponse.yml#/ErrorResponse"
+    "500":
+      description: "Internal Server Error"
+      content:
+        application/json:
+          schema:
+            $ref: "../../components/responses/ErrorResponse.yml#/ErrorResponse"

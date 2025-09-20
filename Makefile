@@ -22,7 +22,7 @@ generate-api:
 		generate \
 		-i /generator/openapi.yml \
 		-g kotlin-spring \
-		--additional-properties=interfaceOnly=true,skipDefaultInterface=false \
+		--additional-properties=interfaceOnly=true,skipDefaultInterface=false,useSpringBoot3=true \
 		-o /local/backend \
 		--api-package com.example.demo.generated.api \
 		--model-package com.example.demo.generated.model \

@@ -1,0 +1,23 @@
+# Write settings that specify files that should not be formatted by the Prettier CLI and editor.
+
+# Ignore artifacts:
+build
+coverage
+
+# next
+.next
+next.config.ts
+next-end.d.ts
+
+# node
+node_modules
+package.json
+package-lock.json
+
+# Panda CSS
+styled-system
+panda.config.ts
+postcss.config.cjs
+
+# linter
+eslint.config.mjs

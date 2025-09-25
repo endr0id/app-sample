@@ -13,6 +13,7 @@ export default defineConfig([
             js.configs.recommended,
             tseslint.configs.recommended,
             "plugin:react/recommended",
+            "plugin:prettier/recommended",
             reactHooks.configs["recommended-latest"],
             reactRefresh.configs.vite,
         ],

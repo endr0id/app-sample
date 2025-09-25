@@ -22,10 +22,6 @@ export default defineConfig([
             "react-hooks",
             "react-refresh",
         ],
-        rules: {
-            "no-unused-vars": "warn",
-            "no-unreachable": "error",
-        },
         languageOptions: {
             ecmaVersion: 2020,
             globals: globals.browser,

@@ -2,6 +2,7 @@ import js from "@eslint/js";
 import tsParser from "@typescript-eslint/parser";
 import { defineConfig, globalIgnores } from "eslint/config";
 import importPlugin from "eslint-plugin-import";
+import react from "eslint-plugin-react";
 import unusedImports from "eslint-plugin-unused-imports";
 import globals from "globals";
 import tseslint from "typescript-eslint";
@@ -10,10 +11,15 @@ export default defineConfig([
   globalIgnores(["dist"]),
   {
     files: ["**/*.{ts,tsx}"],
-    extends: [js.configs.recommended, tseslint.configs.recommended],
+    extends: [
+      js.configs.recommended,
+      tseslint.configs.recommended,
+      react.configs.flat.recommended,
+    ],
     plugins: {
       import: importPlugin,
       "unused-imports": unusedImports,
+      react,
     },
     languageOptions: {
       ecmaVersion: 2020,

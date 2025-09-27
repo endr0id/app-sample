@@ -2,6 +2,7 @@ import js from "@eslint/js";
 import tsParser from "@typescript-eslint/parser";
 import { defineConfig, globalIgnores } from "eslint/config";
 import importPlugin from "eslint-plugin-import";
+import reactHooks from "eslint-plugin-react-hooks";
 import react from "eslint-plugin-react";
 import unusedImports from "eslint-plugin-unused-imports";
 import globals from "globals";
@@ -20,6 +21,7 @@ export default defineConfig([
       import: importPlugin,
       "unused-imports": unusedImports,
       react,
+      "react-hooks": reactHooks,
     },
     settings: {
       react: {
@@ -39,6 +41,8 @@ export default defineConfig([
     },
     rules: {
       "react/react-in-jsx-scope": "off",
+      "react-hooks/rules-of-hooks": "error",
+      "react-hooks/exhaustive-deps": "warn",
       "import/order": [
         "error",
         {

@@ -21,6 +21,11 @@ export default defineConfig([
       "unused-imports": unusedImports,
       react,
     },
+    settings: {
+      react: {
+        version: "detect",
+      },
+    },
     languageOptions: {
       ecmaVersion: 2020,
       globals: globals.browser,
@@ -28,6 +33,7 @@ export default defineConfig([
       sourceType: "module",
     },
     rules: {
+      "react/react-in-jsx-scope": "off",
       "import/order": [
         "error",
         {

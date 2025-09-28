@@ -60,7 +60,7 @@ export default defineConfig([
           ],
           pathGroups: [
             {
-              pattern: "{react,react-dom/**,react-router-dom}",
+              pattern: "{react,@storybook/**}",
               group: "builtin",
               position: "before",
             },

@@ -2,6 +2,7 @@
 import storybook from "eslint-plugin-storybook";
 
 import js from "@eslint/js";
+import pluginQuery from "@tanstack/eslint-plugin-query";
 import tsParser from "@typescript-eslint/parser";
 import { defineConfig, globalIgnores } from "eslint/config";
 import importPlugin from "eslint-plugin-import";
@@ -13,6 +14,7 @@ import tseslint from "typescript-eslint";
 
 export default defineConfig([
   globalIgnores(["dist"]),
+  ...pluginQuery.configs["flat/recommended"],
   {
     files: ["**/*.{ts,tsx}"],
     extends: [

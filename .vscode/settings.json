@@ -9,5 +9,6 @@
         "typescript",
         "javascriptreact",
         "typescriptreact"
-    ]
+    ],
+    "cSpell.words": ["pandacss"]
 }

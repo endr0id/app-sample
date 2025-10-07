@@ -1,49 +1,31 @@
-import type { ButtonHTMLAttributes, ReactNode } from "react";
-import type React from "react";
+import type { ButtonHTMLAttributes, MouseEvent, ReactNode } from "react";
 
-import { cva } from "../../../../styled-system/css";
+import { buttonRecipe } from "./Button.styles";
+
+import type { RecipeVariantProps } from "../../../../styled-system/types";
+
+type ButtonVariants = RecipeVariantProps<typeof buttonRecipe>;
 
 type ButtonProps = {
   children: ReactNode;
-} & Omit<ButtonHTMLAttributes<HTMLButtonElement>, "className" | "style">;
+} & ButtonVariants &
+  Omit<ButtonHTMLAttributes<HTMLButtonElement>, "className" | "style">;
 
-const buttonRecipe = cva({
-  base: {
-    borderRadius: "md",
-    paddingX: "4",
-    paddingY: "2",
-    color: "white",
-    backgroundColor: "blue.500",
-    fontSize: "0.75em",
-    fontWeight: "semibold",
-    _hover: {
-      backgroundColor: "blue.600",
-    },
-    _active: {
-      backgroundColor: "blue.700",
-    },
-    _disabled: {
-      color: "gray.300",
-      backgroundColor: "gray.400",
-      _hover: {
-        backgroundColor: "gray.400",
-      },
-      _active: {
-        backgroundColor: "gray.400",
-      },
-    },
-  },
-});
-
-const Button = ({ children, disabled, onClick, ...props }: ButtonProps) => {
-  const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+const Button = ({
+  children,
+  size = "large",
+  disabled,
+  onClick,
+  ...props
+}: ButtonProps) => {
+  const handleClick = (e: MouseEvent<HTMLButtonElement>) => {
     if (disabled) return;
     onClick?.(e);
   };
 
   return (
     <button
-      className={buttonRecipe()}
+      className={buttonRecipe({ size: size })}
       disabled={disabled}
       onClick={handleClick}
       {...props}

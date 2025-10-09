@@ -13,7 +13,7 @@ type ButtonProps = {
 
 const Button = ({
   children,
-  size = "large",
+  size = "medium",
   disabled,
   onClick,
   ...props

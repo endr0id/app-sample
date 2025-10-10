@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
 import Button from "../../ui/button/Button";
+import Form from "../../ui/form/Form";
 import Input from "../../ui/form/input/Input";
 
 import AuthLayout from "./AuthLayout";
@@ -10,9 +11,11 @@ const meta = {
   args: {
     children: (
       <>
-        <Input placeholder="id" />
-        <Input type="password" placeholder="password" />
-        <Button>login</Button>
+        <Form>
+          <Input placeholder="id" />
+          <Input type="password" placeholder="password" />
+          <Button>login</Button>
+        </Form>
       </>
     ),
     title: "Log in to your account",

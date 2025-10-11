@@ -6,6 +6,8 @@ import { RouterProvider } from "react-router/dom";
 import App from "../App";
 import { paths } from "../config/paths";
 
+import LoginRoute from "./routes/auth/login";
+
 // TODO: loader追加検討
 const createAppRouter = () =>
   createBrowserRouter([
@@ -15,7 +17,7 @@ const createAppRouter = () =>
     },
     {
       path: paths.auth.path,
-      element: <>login</>,
+      element: <LoginRoute />,
     },
   ]);
 

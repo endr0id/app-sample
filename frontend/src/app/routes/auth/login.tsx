@@ -1,7 +1,12 @@
 import AuthLayout from "../../../components/layouts/auth/AuthLayout";
+import LoginForm from "../../../features/auth/login-form";
 
 const LoginRoute = () => {
-  return <AuthLayout title="Log in to your account">hello</AuthLayout>;
+  return (
+    <AuthLayout title="Log in to your account">
+      <LoginForm />
+    </AuthLayout>
+  );
 };
 
 export default LoginRoute;

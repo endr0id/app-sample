@@ -14,7 +14,7 @@ const meta = {
         <Form>
           <Input placeholder="id" />
           <Input type="password" placeholder="password" />
-          <Button>login</Button>
+          <Button onClick={() => console.log("clicked")}>login</Button>
         </Form>
       </>
     ),
@@ -25,6 +25,6 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Layout: Story = {
+export const LogIn: Story = {
   render: (args) => <AuthLayout title={args.title}>{args.children}</AuthLayout>,
 };

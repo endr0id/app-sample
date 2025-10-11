@@ -1,22 +1,18 @@
-import { css } from "../../../../styled-system/css";
+import { css, cx } from "../../../../styled-system/css";
+import { flex } from "../../../../styled-system/patterns";
 
-export const wrapper = css({
-  display: "block",
-  flexDirection: "column",
-  justifyContent: "center",
-  paddingX: "12",
-  paddingY: "12",
-  minHeight: "100vh",
-  backgroundColor: "gray.50",
-  sm: {
-    paddingX: "6",
-  },
-  lg: {
-    paddingX: "8",
-  },
-});
+export const authWrapper = cx(
+  flex({
+    direction: "column",
+    justifyContent: "center",
+  }),
+  css({
+    minHeight: "100vh",
+    backgroundColor: "gray.50",
+  }),
+);
 
-export const headerContainer = css({
+export const authHeader = css({
   sm: {
     marginX: "auto",
     width: "100%",
@@ -24,8 +20,7 @@ export const headerContainer = css({
   },
 });
 
-export const logoContainer = css({
-  display: "flex",
+export const logoContainer = flex({
   justifyContent: "center",
 });
 
@@ -49,10 +44,8 @@ export const contentWrapper = css({
 });
 
 export const contentBox = css({
-  paddingTop: "2rem",
-  paddingBottom: "2rem",
-  paddingRight: "1rem",
-  paddingLeft: "1rem",
+  paddingX: "1rem",
+  paddingY: "2rem",
   boxShadow: "var(--shadow-md)",
   backgroundColor: "white",
   sm: {

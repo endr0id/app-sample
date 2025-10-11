@@ -1,12 +1,12 @@
 import reactLogo from "../../../assets/react.svg";
 
 import {
+  authHeader,
+  authWrapper,
   contentBox,
   contentWrapper,
-  headerContainer,
   logoContainer,
   titleStyle,
-  wrapper,
 } from "./AuthLayout.styles";
 
 type AuthLayoutProps = {
@@ -16,8 +16,8 @@ type AuthLayoutProps = {
 
 const AuthLayout = ({ children, title = "title" }: AuthLayoutProps) => {
   return (
-    <div className={wrapper}>
-      <div className={headerContainer}>
+    <div className={authWrapper}>
+      <div className={authHeader}>
         <div className={logoContainer}>
           <a href="https://react.dev" target="_blank" rel="noreferrer">
             <img src={reactLogo} alt="React logo" />

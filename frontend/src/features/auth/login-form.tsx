@@ -1,5 +1,5 @@
 import Button from "../../components/ui/button/Button";
-import Form from "../../components/ui/form/sample";
+import Form from "../../components/ui/form/form";
 import Input from "../../components/ui/form/input/Input";
 
 const LoginForm = () => {

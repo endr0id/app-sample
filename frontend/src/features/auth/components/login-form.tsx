@@ -1,11 +1,12 @@
 import { stack } from "../../../../styled-system/patterns";
-import { useAppForm } from "../../../components/ui/form/form";
+import { useAppForm } from "../../../hooks/form/form-hook";
+import { loginFormOpts, loginSchema } from "../constants/login";
 
 const LoginForm = () => {
   const form = useAppForm({
-    defaultValues: {
-      email: "",
-      password: "",
+    ...loginFormOpts,
+    validators: {
+      onBlur: loginSchema,
     },
     onSubmit: ({ value }) => {
       console.log("result", value);
@@ -25,13 +26,21 @@ const LoginForm = () => {
     >
       <form.AppField
         name="email"
-        children={(field) => (
-          <field.TextField placeholder="sample@example.com" />
-        )}
+        children={(field) => {
+          return (
+            <field.FieldWrapper label="Email Address">
+              <field.TextField placeholder="sample@example.com" />
+            </field.FieldWrapper>
+          );
+        }}
       />
       <form.AppField
         name="password"
-        children={(field) => <field.TextField type="password" />}
+        children={(field) => (
+          <field.FieldWrapper label="Password">
+            <field.TextField type="password" />
+          </field.FieldWrapper>
+        )}
       />
       <form.AppForm>
         <form.SubmitButton label="Login" />

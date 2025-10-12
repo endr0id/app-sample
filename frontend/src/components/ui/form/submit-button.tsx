@@ -1,6 +1,5 @@
+import { useFormContext } from "../../../hooks/form/form-hook";
 import Button from "../button/Button";
-
-import { useFormContext } from "./form";
 
 type SubmitButtonProps = {
   label: string;

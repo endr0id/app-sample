@@ -1,14 +1,42 @@
-import Button from "../../../components/ui/button/Button";
-import Form from "../../../components/ui/form/form";
-import Input from "../../../components/ui/form/input/Input";
+import { stack } from "../../../../styled-system/patterns";
+import { useAppForm } from "../../../components/ui/form/form";
 
 const LoginForm = () => {
+  const form = useAppForm({
+    defaultValues: {
+      email: "",
+      password: "",
+    },
+    onSubmit: ({ value }) => {
+      console.log("result", value);
+    },
+  });
+
   return (
-    <Form>
-      <Input type="email" placeholder="sample@example.com" />
-      <Input type="password" />
-      <Button>Log in</Button>
-    </Form>
+    <form
+      onSubmit={(e) => {
+        e.preventDefault();
+        form.handleSubmit();
+      }}
+      className={stack({
+        gap: "6",
+        padding: "6",
+      })}
+    >
+      <form.AppField
+        name="email"
+        children={(field) => (
+          <field.TextField placeholder="sample@example.com" />
+        )}
+      />
+      <form.AppField
+        name="password"
+        children={(field) => <field.TextField type="password" />}
+      />
+      <form.AppForm>
+        <form.SubmitButton label="Login" />
+      </form.AppForm>
+    </form>
   );
 };
 

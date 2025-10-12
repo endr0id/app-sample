@@ -49,6 +49,7 @@ export default defineConfig([
       "react-hooks/rules-of-hooks": "error",
       "react-hooks/exhaustive-deps": "warn",
       "react/prop-types": "off",
+      "react/no-children-prop": "off",
       "import/order": [
         "error",
         {

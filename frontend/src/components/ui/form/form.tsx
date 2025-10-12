@@ -1,10 +1,27 @@
-import type { FormHTMLAttributes } from "react";
+import { createFormHook, createFormHookContexts } from "@tanstack/react-form";
 
 import { stack } from "../../../../styled-system/patterns";
 
+import SubmitButton from "./submit-button";
+import TextField from "./text-field";
+
 type FormProps = {
   children: React.ReactNode;
-} & FormHTMLAttributes<HTMLFormElement>;
+};
+
+export const { fieldContext, formContext, useFieldContext, useFormContext } =
+  createFormHookContexts();
+
+export const { useAppForm } = createFormHook({
+  fieldComponents: {
+    TextField,
+  },
+  formComponents: {
+    SubmitButton,
+  },
+  fieldContext,
+  formContext,
+});
 
 const Form = ({ children }: FormProps) => {
   return (

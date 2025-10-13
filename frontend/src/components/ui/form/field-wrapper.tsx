@@ -4,6 +4,8 @@ import { useFieldContext } from "../../../hooks/form/form-hook";
 
 import { errorTextRecipe } from "./form.styles";
 
+import type { ZodIssue } from "zod/v3";
+
 type FieldWrapperProps = {
   children: React.ReactNode;
   label: string;
@@ -11,7 +13,10 @@ type FieldWrapperProps = {
 
 const FieldWrapper = ({ children, label }: FieldWrapperProps) => {
   const field = useFieldContext<string>();
-  const errors = useStore(field.store, (state) => state.meta.errors);
+  const errors = useStore(
+    field.store,
+    (state) => state.meta.errors as ZodIssue[],
+  );
   return (
     <div>
       <label htmlFor={field.name}>{label}</label>

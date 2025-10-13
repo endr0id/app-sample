@@ -1,1 +1,1 @@
-# app-sample
+# demo-spa

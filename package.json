@@ -8,7 +8,8 @@
     },
     "lint-staged": {
         "frontend/src/**/*.{js,jsx,ts,tsx}": [
-            "cd frontend && npm run lint --"
+            "cd frontend && npm run lint --",
+            "npx prettier --write"
         ]
     }
 }

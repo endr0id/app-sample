@@ -6,6 +6,7 @@ import { storybookTest } from "@storybook/addon-vitest/vitest-plugin";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
+import { tanstackRouter } from "@tanstack/router-plugin/vite";
 import react from "@vitejs/plugin-react-swc";
 import { defineConfig } from "vite";
 const dirname =
@@ -15,7 +16,10 @@ const dirname =
 
 // More info at: https://storybook.js.org/docs/next/writing-tests/integrations/vitest-addon
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    react(),
+    tanstackRouter({ target: "react", autoCodeSplitting: true }),
+  ],
   test: {
     projects: [
       {

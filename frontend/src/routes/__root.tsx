@@ -5,7 +5,7 @@ const RootLayout = () => (
     <div>
       <Link to="/">Home</Link>
       <Link to="/sign-in">SignIn</Link>
-      <Link to="/signup">SignUp</Link>
+      <Link to="/auth/signup">SignUp</Link>
     </div>
     <hr />
     <Outlet />

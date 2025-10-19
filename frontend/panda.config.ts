@@ -14,9 +14,22 @@ export default defineConfig({
   // Files to exclude
   exclude: [],
 
+  globalCss: {
+    "html body": {
+      backgroundColor: "#222222",
+      color: "white",
+    },
+  },
+
   // Useful for theme customization
   theme: {
-    extend: {},
+    extend: {
+      semanticTokens: {
+        colors: {
+          card: { value: "#404040" },
+        },
+      },
+    },
   },
 
   // The output directory for your css system

@@ -1,32 +1,36 @@
 import reactLogo from "../../../assets/react.svg";
+import Card from "../card/Card";
 
 import {
-  authHeader,
   authWrapper,
-  contentBox,
   contentWrapper,
+  greetingRecipe,
+  headingRecipe,
   logoContainer,
-  titleStyle,
 } from "./AuthLayout.styles";
 
 type AuthLayoutProps = {
   children: React.ReactNode;
-  title: string;
 };
 
-const AuthLayout = ({ children, title = "title" }: AuthLayoutProps) => {
+const greeting = "Welcome";
+const headingText = "Enter your user information to get started.";
+
+const AuthLayout = ({ children }: AuthLayoutProps) => {
   return (
     <div className={authWrapper}>
-      <div className={authHeader}>
-        <div className={logoContainer}>
-          <a href="https://react.dev" target="_blank" rel="noreferrer">
-            <img src={reactLogo} alt="React logo" />
-          </a>
-        </div>
-        <h2 className={titleStyle}>{title}</h2>
-      </div>
       <div className={contentWrapper}>
-        <div className={contentBox}>{children}</div>
+        <Card>
+          <div className={logoContainer}>
+            <a href="https://react.dev" target="_blank" rel="noreferrer">
+              <img src={reactLogo} alt="React logo" />
+            </a>
+          </div>
+
+          <div className={greetingRecipe}>{greeting}</div>
+          <div className={headingRecipe}>{headingText}</div>
+          {children}
+        </Card>
       </div>
     </div>
   );

@@ -9,7 +9,7 @@ export const Route = createFileRoute("/auth/signup/")({
 
 function SignUpRoute() {
   return (
-    <AuthLayout title="Create your Account">
+    <AuthLayout>
       <SignUpForm />
     </AuthLayout>
   );

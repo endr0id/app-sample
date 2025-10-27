@@ -1,12 +1,12 @@
-import { stack } from "../../../../styled-system/patterns";
-import { useAppForm } from "../../../hooks/form/form-hook";
-import { loginFormOpts, loginSchema } from "../constants/login";
+import { stack } from "../../../../../styled-system/patterns";
+import { useAppForm } from "../../../../hooks/form/form-hook";
+import { signInFormOpts, signInValidationSchema } from "../constants/signin";
 
-const LoginForm = () => {
+const SignInForm = () => {
   const form = useAppForm({
-    ...loginFormOpts,
+    ...signInFormOpts,
     validators: {
-      onBlur: loginSchema,
+      onBlur: signInValidationSchema,
     },
     onSubmit: ({ value }) => {
       console.log("result", value);
@@ -49,4 +49,4 @@ const LoginForm = () => {
   );
 };
 
-export default LoginForm;
+export default SignInForm;
